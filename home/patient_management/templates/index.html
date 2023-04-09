@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+
+<div class="container">
+    <h1 class="card shadow-lg p-3 " style="text-align: center; text-decoration: underline;">Hospital Management Application</h1>
+
+    <div class="p-5 card shadow-lg justify-content-center">
+        <h2 style="text-align: center; padding: 15px;">
+            <p>Click Here</p>
+            
+                <button class="btn btn-success"><a href="{% url 'signup'%}" style="color: white;">Doctor</a></button>
+            </p>  
+            <p>
+                <button class="btn btn-success"><a href="{% url 'signup'%}" style="color: white;">Patient</a></button>
+            </p>
+        </h2>
+
+    </div>
+</div>
+
+
+{% endblock %}

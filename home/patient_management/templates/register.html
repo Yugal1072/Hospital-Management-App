@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<style>
+    body{
+        background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #333333;
+			margin: 0;
+			padding: 0;
+}
+  .form-group{
+    padding: 10px;
+    margin: 10px;
+  }
+
+</style>
+
+    <div class="container" style="height: 100%; ">
+      <!-- FORM -->
+      <form class=" col-6 mx-auto card  shadow-lg" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2 class=" text-bg-dark " style="text-align: center; padding: 10px;">Register</h2>
+
+        <div class="form-group shadow-lg ">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" class="form-control"  name = "first_name" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text" class="form-control"  name = "last_name" placeholder="Enter your last name">
+        </div>
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputEmail1">Profile Picture</label>
+            <input type="file" class="form-control"  name = "photo" placeholder="Upload the Profile Picture">
+        </div>
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control"  name = "username" placeholder="Enter your username">
+        </div>
+        
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control"  name = "email" placeholder="Enter your email">
+        </div>
+        
+        <div class="form-group shadow-lg">
+            <label for="exampleInputEmail1">Address</label>
+            <textarea type="text" class="form-control"  name = "Address" placeholder="Enter your Address"></textarea>
+        </div>
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name = "password1" placeholder="Enter the Password">
+        </div>
+
+        <div class="form-group shadow-lg">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control" name = "password2" placeholder="Confirm Password">
+        </div>
+
+          <p class=" m-auto">Already have an account <a href="{% url 'login' %}">Login</a></p> <br>
+
+          <button type="submit" class="btn btn-primary m-auto" style="width: 250px;">Register</button>
+      </form>
+    </div>
+
+    
+
+
+{% endblock %}
+
